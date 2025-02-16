@@ -3,11 +3,16 @@ import { ArticleComponent } from '../article/article.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { Chart, registerables } from 'chart.js';
+import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
+import { RouterModule } from '@angular/router';
+import { PieComponent } from '../pie/pie.component';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'pb-homepage',
   standalone: true,
-  imports: [ArticleComponent, HttpClientModule],
+  imports: [ArticleComponent, HttpClientModule, BreadcrumbsComponent, PieComponent],
+  providers: [DataService],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'] // Corrected 'styleUrl' to 'styleUrls'
 })

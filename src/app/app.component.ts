@@ -7,6 +7,7 @@ import { ArticleComponent } from './article/article.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'pb-root',
@@ -21,6 +22,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     FooterComponent, 
     ArticleComponent, 
     LoginComponent, 
+    HttpClientModule,
     AboutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
